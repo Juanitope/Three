@@ -26,6 +26,7 @@ public class ManipNombresInt_DOUILLET_TALL {
       System.out.println("La division euclidienne est "+ div);
       int reste = entier1%entier2;
       System.out.println("Le reste de la division est "+ reste);
+      //fin
     }
     
 }
