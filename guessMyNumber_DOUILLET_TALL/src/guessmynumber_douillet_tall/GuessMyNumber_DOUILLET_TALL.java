@@ -13,18 +13,32 @@ public class GuessMyNumber_DOUILLET_TALL {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        int difficulte;
+        int n;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Choissisez uen difficulté : Facile,Normal,Difficile");
-        String difficulte=sc.next();
-        
-        
+        System.out.println("Entrez le numéro de la difficulté choisi : Facile(1),Normal(2),Difficile(3)");
+        difficulte=sc.nextInt() ;
         Random generateurAleat = new Random();
-        int n = generateurAleat.nextInt(100);
-        //System.out.println(n);
-        
+        if (difficulte==1){
+            
+            n = generateurAleat.nextInt(100);
+            System.out.println("Entre un nombre entre 0 et 100");
+        } 
+        if (difficulte==2){
+            
+            n = generateurAleat.nextInt(200);
+            System.out.println("Entre un nombre entre 0 et 200");
+        }    
+        if (difficulte==3){
+            
+            n = generateurAleat.nextInt(300);
+            System.out.println("Entre un nombre entre 0 et 300");
+        } 
+        else {
+            n = generateurAleat.nextInt(100);
+        }   
         
         int nombre;
-        System.out.println("Entre un nombre entre 0 et 100");
         nombre = sc.nextInt();
         int essais= 1;
         if (nombre == n) {
