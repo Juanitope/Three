@@ -48,6 +48,19 @@ public class GuessMyNumber_DOUILLET_TALL {
         if (nombre != n) {
             while (nombre != n) {
                 
+                if (difficulte==3){
+                    if (essais>5){
+                        System.out.println("Vous avez perdu, trop d'essais...");
+                        break;
+                    }
+                }
+                if (difficulte==2){
+                    if (essais>5){
+                        System.out.println("Vous avez perdu, trop d'essais...");
+                        break;
+                    }
+                }
+                
                 if (nombre > n) {
                     System.out.println("Plus petit");
                     nombre = sc.nextInt();
