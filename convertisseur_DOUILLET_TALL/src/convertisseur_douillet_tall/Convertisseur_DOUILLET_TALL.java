@@ -56,7 +56,7 @@ public class Convertisseur_DOUILLET_TALL {
         }            
                     
         System.out.println("\n"+temp+" degrés "+text1+" est égal à "+temps+" degrés "+text2);
-        
+        //fini
         
         
     
