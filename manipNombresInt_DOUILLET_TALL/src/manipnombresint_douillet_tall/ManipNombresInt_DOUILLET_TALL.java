@@ -1,18 +1,14 @@
 package manipnombresint_douillet_tall;
 import java.util.Scanner;
-/**
- *
- * @author douil
- */
+
 public class ManipNombresInt_DOUILLET_TALL {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
       int entier1;
       int entier2; 
+      System.out.println("Entrez deux entiers :");
       entier1=sc.nextInt();
       entier2=sc.nextInt();
       System.out.println(entier1 + " et " +entier2);
@@ -26,7 +22,7 @@ public class ManipNombresInt_DOUILLET_TALL {
       System.out.println("La division euclidienne est "+ div);
       int reste = entier1%entier2;
       System.out.println("Le reste de la division est "+ reste);
-      //C bon
+      
     }
     
 }
