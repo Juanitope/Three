@@ -10,23 +10,27 @@ public class Stats_DOUILLET_TALL {
 
     
     public static void main(String[] args) {
-     int [] tab = {0,0,0,0,0,0} ;
-     tab = new int[6] ; 
+        int [] tab ;
+        tab = new int[6] ; 
       
-     Scanner sc = new Scanner(System.in); 
-     System.out.println("Entre une valeur :");
-     int m=sc.nextInt();
-     for (int i=1;i<=m;) {
-        Random generateurAleat = new Random();
-        int nombre = generateurAleat.nextInt(5);
-        tab[nombre] += 1 ; 
+        Scanner sc = new Scanner(System.in); 
+        System.out.println("Entre une valeur :");
+        int m=sc.nextInt();
+        int i=1;
+        for (;i<=m;) {
+            Random generateurAleat = new Random();
+            int nombre = generateurAleat.nextInt(5);
+            tab[nombre] += 1 ;
+            i +=1;
         }
      
      //Affichage
      //Affichage en pourcentage
-     for (int u=0;u<=5;){
-         System.out.println("Il y eu"+tab[u]+ " fois le chiffre"+(u+1));
-     }
+        int u=0;
+        for (;u<=5;){
+            System.out.println("Il y eu "+tab[u]+ " fois le chiffre "+(u+1));
+            u+=1;
+        }
            
     }
 
