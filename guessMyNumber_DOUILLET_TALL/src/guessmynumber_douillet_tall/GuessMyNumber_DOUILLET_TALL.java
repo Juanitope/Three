@@ -3,15 +3,10 @@ package guessmynumber_douillet_tall;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- *
- * @author douil
- */
+
 public class GuessMyNumber_DOUILLET_TALL {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         int difficulte;
         int n;
@@ -19,6 +14,8 @@ public class GuessMyNumber_DOUILLET_TALL {
         System.out.println("Entrez le numéro de la difficulté choisi : Facile(1),Normal(2),Difficile(3)");
         difficulte=sc.nextInt() ;
         Random generateurAleat = new Random();
+        
+        
         if (difficulte==1){
             
             n = generateurAleat.nextInt(100);
@@ -38,6 +35,9 @@ public class GuessMyNumber_DOUILLET_TALL {
             n = generateurAleat.nextInt(100);
         }   
         
+        
+        
+        
         int nombre;
         nombre = sc.nextInt();
         int essais= 1;
@@ -45,17 +45,20 @@ public class GuessMyNumber_DOUILLET_TALL {
             System.out.println("Vous avez trouvez le bon numéro");
         }
 
+        
+        
+        
         if (nombre != n) {
             while (nombre != n) {
                 
                 if (difficulte==3){
-                    if (essais>5){
+                    if (essais>10){
                         System.out.println("Vous avez perdu, trop d'essais...");
                         break;
                     }
                 }
                 if (difficulte==2){
-                    if (essais>5){
+                    if (essais>20){
                         System.out.println("Vous avez perdu, trop d'essais...");
                         break;
                     }
