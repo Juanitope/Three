@@ -12,7 +12,7 @@ public class Stats_DOUILLET_TALL {
     public static void main(String[] args) {
         int [] tab ;
         tab = new int[6] ; 
-      
+        double pour;
         Scanner sc = new Scanner(System.in); 
         System.out.println("Entre une valeur :");
         int m=sc.nextInt();
@@ -29,6 +29,8 @@ public class Stats_DOUILLET_TALL {
         int u=0;
         for (;u<=5;){
             System.out.println("Il y eu "+tab[u]+ " fois le chiffre "+(u+1));
+            pour=tab[u]*100/m;
+            System.out.println(pour+"%");
             u+=1;
         }
            
