@@ -25,10 +25,6 @@ public class TP2_manip_DOUILLET_TALL {
         assiette1.nbCalories=assiette2.nbCalories;
         assiette2.nbCalories=inverseur;
         
-        Moussaka assiette666 = assiette1 ;
-        
-        //Moussaka assiette667 = new Tartiflette() ;
-
     }
     
 }
