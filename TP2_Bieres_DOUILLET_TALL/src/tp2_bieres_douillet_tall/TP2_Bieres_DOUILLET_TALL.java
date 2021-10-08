@@ -18,14 +18,22 @@ public class TP2_Bieres_DOUILLET_TALL {
        /*Biere1.Nom = "Cuvée des trolls";
        Biere1.degreAlcool = (float)7.0 ;
        Biere1.brasserie = "Dubuisson";*/
-       Biere1.ouverte = false ; 
+       Biere1.ouverte = false ;
        Biere1.lireEtiquette();
+       System.out.println("La bouteille est ouverte ? : "+Biere1.ouverte);
+       //Ouverture de la bière
+       System.out.println("Je décapsule la bière");
+       Biere1.Décapsuler();
+       System.out.println(Biere1) ;
        
        BouteilleBiere Biere2 = new BouteilleBiere("Leffe", (float) 6.6, "Abbaye de Leffe") ;
        /*Biere2.Nom = "Leffe";
        Biere2.degreAlcool = (float)6.6 ;
        Biere2.brasserie = "Abbaye de Leffe";*/
        Biere2.lireEtiquette();
+       Biere2.ouverte = true ;
+       Biere2.Décapsuler();
+       System.out.println(Biere2) ;
        
        BouteilleBiere Biere3 = new BouteilleBiere("Pelfort", (float) 7.6, "Fort de Pelfort") ;
        Biere3.lireEtiquette();
