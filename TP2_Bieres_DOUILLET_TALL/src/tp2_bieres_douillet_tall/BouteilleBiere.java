@@ -14,9 +14,18 @@ public class BouteilleBiere {
     float degreAlcool;
     String brasserie;
     boolean ouverte;
+    
     //Méthodes 
     public void lireEtiquette() {
     System.out.println("Bouteille de " + Nom +" (" + degreAlcool +" degres) \nBrasserie : " + brasserie ) ;
-
     }
+    //Constructeur
+    public BouteilleBiere(String unNom, float unDegre, String uneBrasserie) {
+    Nom = unNom;
+    degreAlcool = unDegre;
+    brasserie = uneBrasserie;
+    ouverte = false;
+    }
+
+    
 }
