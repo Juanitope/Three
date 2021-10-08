@@ -15,16 +15,16 @@ public class TP2_Bieres_DOUILLET_TALL {
      */
     public static void main(String[] args) {
        BouteilleBiere Biere1 = new BouteilleBiere("Cuvéee des trolls ", (float) 7.0, "Dubuisson") ;
-       Biere1.Nom = "Cuvée des trolls";
+       /*Biere1.Nom = "Cuvée des trolls";
        Biere1.degreAlcool = (float)7.0 ;
-       Biere1.brasserie = "Dubuisson";
+       Biere1.brasserie = "Dubuisson";*/
        Biere1.ouverte = false ; 
        Biere1.lireEtiquette();
        
        BouteilleBiere Biere2 = new BouteilleBiere("Leffe", (float) 6.6, "Abbaye de Leffe") ;
-       Biere2.Nom = "Leffe";
+       /*Biere2.Nom = "Leffe";
        Biere2.degreAlcool = (float)6.6 ;
-       Biere2.brasserie = "Abbaye de Leffe";
+       Biere2.brasserie = "Abbaye de Leffe";*/
        Biere2.lireEtiquette();
        
        BouteilleBiere Biere3 = new BouteilleBiere("Pelfort", (float) 7.6, "Fort de Pelfort") ;
