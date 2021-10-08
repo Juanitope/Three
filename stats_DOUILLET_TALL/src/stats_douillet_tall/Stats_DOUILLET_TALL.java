@@ -19,7 +19,7 @@ public class Stats_DOUILLET_TALL {
         int i=1;
         for (;i<=m;) {
             Random generateurAleat = new Random();
-            int nombre = generateurAleat.nextInt(5);
+            int nombre = generateurAleat.nextInt(6);
             tab[nombre] += 1 ;
             i +=1;
         }
