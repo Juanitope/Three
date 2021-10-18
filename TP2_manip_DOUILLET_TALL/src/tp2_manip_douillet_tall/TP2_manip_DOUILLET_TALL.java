@@ -17,6 +17,7 @@ public class TP2_manip_DOUILLET_TALL {
         Tartiflette assiette1 = new Tartiflette(500) ;
         Tartiflette assiette2 = new Tartiflette(600) ;
         Tartiflette assiette3 = assiette2 ; 
+        //Une nouvelle assiette de tartiflette a été crée , elle est réferé par la tartiflettre 2
         assiette1.nbCalories += 1000;
         System.out.println("nb de calories de Assiette 1 : " +assiette1.nbCalories) ;
         System.out.println("nb de calories de Assiette 2 : " +assiette2.nbCalories) ;
@@ -24,6 +25,13 @@ public class TP2_manip_DOUILLET_TALL {
         int inverseur = assiette1.nbCalories;
         assiette1.nbCalories=assiette2.nbCalories;
         assiette2.nbCalories=inverseur;
+        System.out.println("Après inversion :");
+        System.out.println("nb de calories de Assiette 2 : " +assiette2.nbCalories) ;
+        System.out.println("nb de calories de Assiette 3 : " +assiette3.nbCalories) ;
+        
+        //Moussaka assiette666 = assiette1 ;
+        //Moussaka assiette667 = new Tartiflette() ;
+        //Impossible de réferer deux objets qui n'ont aucun rapport
         
     }
     
