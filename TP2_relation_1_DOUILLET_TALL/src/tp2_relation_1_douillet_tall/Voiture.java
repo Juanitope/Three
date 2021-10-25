@@ -20,5 +20,8 @@ public class Voiture {
     }
         @Override
         public String toString() { 
+            String chaine;
+             chaine= Modele + Marque + PuissanceCV;
+             return chaine;
         }
 }

@@ -19,5 +19,8 @@ public class Personne {
     }
     @Override
     public String toString() { 
+      String chaine;
+      chaine= nom + prenom;
+      return chaine;
         }
 }
