@@ -9,5 +9,9 @@ package tp2_manip_douillet_tall;
  * @author douil
  */
 public class Moussaka {
-    int nbCalories;
-}
+    int nbCalories;  
+    
+    
+    public Moussaka(int calo) {
+    nbCalories = calo; 
+    }}

@@ -33,10 +33,12 @@ public class TP2_manip_DOUILLET_TALL {
         //Moussaka assiette667 = new Tartiflette() ;
         //Impossible de réferer deux objets qui n'ont aucun rapport
         
-        Moussaka[] tabMoussaka = new Moussaka[10]; //Création du tableau
-        for (int i=0; i<0 ; i++){
-            
-        }
+        Moussaka a;
+        Moussaka[] tab = new Moussaka [10];
+        for(int i=0; i<=10; i++){
+            a = new Moussaka(400);
+            tab[i]=a;
+            }
                  
     }
 }
