@@ -11,11 +11,13 @@ package tp2_relation_1_douillet_tall;
 public class Personne {
     String nom;
     String prenom;
+    int nbVoitures = 0;
+    Voiture [] liste_voitures;
     
     public Personne(String Unnom, String Unprenom){
         nom=Unnom;
         prenom=Unprenom;
-        
+        liste_voitures = new Voiture [3] ; 
     }
     @Override
     public String toString() { 

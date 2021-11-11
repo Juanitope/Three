@@ -22,10 +22,19 @@ public class TP2_relation_1_DOUILLET_TALL {
         System.out.println("liste des voitures disponibles "+ uneClio +
         "\n" + uneAutreClio + "\n" + une2008 + "\n" + uneMicra ) ;
         
+        bob.liste_voitures [0] = uneClio;
+        bob.liste_voitures [1] = uneMicra;
+        reno.liste_voitures [0] = une2008;
+        reno.liste_voitures [1] = uneAutreClio;
+        bob.nbVoitures = 2;
+        reno.nbVoitures = 2;
+        uneMicra.Proprio = bob;
+        uneClio.Proprio = bob;
+        une2008.Proprio = reno;
+        uneAutreClio.Proprio = reno;
         
-        
-        
-        
+        System.out.println("les "+ bob.nbVoitures + " voiture de bob sont une "+ bob.liste_voitures[0] +" et une "+ bob.liste_voitures[1]);
+        System.out.println("les "+ reno.nbVoitures + " voiture de reno sont une "+ reno.liste_voitures[0] +" et une "+ reno.liste_voitures[1]);
     }
     
 }

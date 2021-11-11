@@ -12,11 +12,13 @@ public class Voiture {
     String Modele;
     String Marque;
     int PuissanceCV;
+    Personne Proprio;
     
  public Voiture(String LeModele, String LaMarque, int LaPuissanceCV) {
     Modele = LeModele ;
     Marque = LaMarque;
     PuissanceCV = LaPuissanceCV;
+    Proprio = null;
     }
         @Override
         public String toString() { 
