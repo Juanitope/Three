@@ -9,5 +9,14 @@ package tp3_superpuissance_douillet_tall;
  * @author douil
  */
 public class Jeton {
+    String Couleur;
     
+    public Jeton(String Jeton){
+        Couleur=Jeton;
+    }
+        
+    public String lireCouleur(String Couleur) {
+        System.out.println("La couleur du jeton est: "+Couleur);
+        return Couleur;
+    }
 }

@@ -9,5 +9,21 @@ package tp3_superpuissance_douillet_tall;
  * @author douil
  */
 public class Partie {
+    Joueur[2] ListeJoueurs;
+    Joueur joueurCourant;
+    Grille grilleJeu;
     
+    public Partie(Joueur,Joueur){
+        
+    }
+    public void attribuerCouleursAuxJoueurs(){
+        
+    }
+    public void intialiserPartie(){ // Création de la grille et des jetons
+       int grilleJeu[][]= new int[6][7];
+       
+    }
+    public void debuterPartie(){
+        
+    }
 }

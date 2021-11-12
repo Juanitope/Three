@@ -9,5 +9,5 @@ package tp3_superpuissance_douillet_tall;
  * @author douil
  */
 public class Joueur {
-    
+    0
 }
