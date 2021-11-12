@@ -11,11 +11,11 @@ package tp3_superpuissance_douillet_tall;
 public class Jeton {
     String Couleur;
     
-    public Jeton(String Jeton){
-        Couleur=Jeton;
+    public Jeton(String couleurJeton){
+        Couleur=couleurJeton;
     }
         
-    public String lireCouleur(String Couleur) {
+    public String lireCouleur() {
         System.out.println("La couleur du jeton est: "+Couleur);
         return Couleur;
     }

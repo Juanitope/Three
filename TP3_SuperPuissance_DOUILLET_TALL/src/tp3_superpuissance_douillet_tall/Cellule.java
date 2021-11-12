@@ -9,12 +9,13 @@ package tp3_superpuissance_douillet_tall;
  * @author douil
  */
 public class Cellule {
-    int jetonCourant;
+    Jeton jetonCourant;
     boolean trouNoir;
     boolean desintegrateur;
     
         public Cellule(){
-
+              //constructeur initialisant les 
+              //attributs avec des valeurs par défaut
         }
         
         public boolean affecterJeton(int Jeton) {
@@ -24,9 +25,10 @@ public class Cellule {
                     else 
                     ajout=false   
                         
-            }
+                            } 
              return ajout;
         }
+        
         
         
     }

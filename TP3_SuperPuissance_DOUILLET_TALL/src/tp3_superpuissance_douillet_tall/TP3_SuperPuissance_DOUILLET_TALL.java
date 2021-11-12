@@ -15,6 +15,9 @@ public class TP3_SuperPuissance_DOUILLET_TALL {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Jeton J=new Jeton("R");
+        Cellule c = new Cellule();
+        c.affecterJeton(J);
     }
     
 }
