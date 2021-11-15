@@ -14,7 +14,7 @@ public class TP3_SuperPuissance_DOUILLET_TALL {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
         Jeton J=new Jeton("R");
         Cellule c = new Cellule();
         c.affecterJeton(J);

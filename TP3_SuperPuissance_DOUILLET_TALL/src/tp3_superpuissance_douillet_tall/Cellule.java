@@ -16,19 +16,19 @@ public class Cellule {
         public Cellule(){
               //constructeur initialisant les 
               //attributs avec des valeurs par défaut
+              jetonCourant= null;
+              trouNoir = false;
+              desintegrateur=false;
         }
         
-        public boolean affecterJeton(int Jeton) {
-            boolean ajout;
-            if Jeton[i][j]==0 {
-                ajout=true;
-                    else 
-                    ajout=false   
-                        
-                            } 
-             return ajout;
+        public boolean affecterJeton(Jeton unJeton) {
+            
+            if (unJeton == null) {
+               jetonCourant = unJeton;
+                return true;      
+            } 
+            else {
+                return false;
+            }
         }
-        
-        
-        
-    }
+}

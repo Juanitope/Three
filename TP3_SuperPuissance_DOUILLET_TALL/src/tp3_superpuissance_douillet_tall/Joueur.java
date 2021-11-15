@@ -9,5 +9,35 @@ package tp3_superpuissance_douillet_tall;
  * @author douil
  */
 public class Joueur {
-    0
+    String Nom;
+    String Couleur;
+    int nombreJetonRestant;
+    Jeton listeJetons[] = new Jeton[21];
+    
+    public Joueur() {
+        Nom=null;
+        Couleur=null;
+        nombreJetonRestant=0;
+       
+    }
+    
+    public Joueur(String nom){
+        Nom=nom;
+       
+    }
+    public void affectcouleur(String couleurJeton){
+        Couleur=couleurJeton;
+            }
+                     
+    public boolean ajouterjeton(Jeton unJeton){
+        if (nombreJetonRestant>=21) {
+            return false;
+        }
+        else {
+        listeJetons[nombreJetonRestant++]=unJeton;
+        return true;
+        }
+    }
+    
+
 }

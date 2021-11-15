@@ -36,4 +36,7 @@ public class Grille {
     public boolean etreGagnantePourJoueur(Joueur){
         
     }
+    public void tasserGrille(int){
+        
+    }
 }
