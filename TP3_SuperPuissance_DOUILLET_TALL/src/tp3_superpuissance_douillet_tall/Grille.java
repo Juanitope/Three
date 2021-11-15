@@ -23,18 +23,23 @@ public class Grille {
     
     public boolean ajouterJetonDansColonne(Jeton joueur,int colonne){ 
         //Colonne remplie ?
-        if (colonne )
-        
-        
+        for (int i=0 ; i<6 ; i++){
+        if (CellulesduJeu[i][colonne]==null){
+            CellulesduJeu[i][colonne].jetonCourant=joueur;
+            return true;
+            }
+        }
         return false;
-    }
+        }
     
     
     public boolean etreRemplie(){ // Renvoi true si la grille est remplie
-        
-        
-        
-        
+        for (int i=0; i<6 ; i++) {
+            if (CellulesduJeu[i][]==){
+                
+                return false;
+                }
+            }
         return true;   
     }
     
@@ -68,7 +73,7 @@ public class Grille {
         }
     }
     public String lireCouleurDuJeton(int i ,int j ){ // renvoi la couleur
-        return CellulesduJeu[i][j].lireCouleur();
+        return CellulesduJeu[i][j].jetonCourant.lireCouleur();
     }
     
     public boolean etreGagnantePourJoueur(Joueur){ // renvoi vrai si un joueur à aligner 4 pions d'une même couleur (diago/horizentale/verticale)
