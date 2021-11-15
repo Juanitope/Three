@@ -31,4 +31,32 @@ public class Cellule {
                 return false;
             }
         }
+      /* public Jeton recupererJeton() {
+           
+           return leJeton;
+       }  
+       public boolean supprimerJeton() {
+           
+       }
+       public boolean placerTrouNoir() {
+           
+       }
+       public boolean placerDeesintegrateurs() {
+           
+       }
+       public boolean presenceTrouNoir() {
+           
+       }   
+       public boolean presenceDesintegrateur() {
+           
+       }
+       public String lireCouleurDuJeton() {
+           
+       }
+       public boolean recupererDesintegrateur() {
+           
+       }
+       public boolean activerTrouNoir() {
+           
+       } */
 }

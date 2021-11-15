@@ -38,6 +38,11 @@ public class Joueur {
         return true;
         }
     }
-    
+    /*
+    public void obtenirDesintegrateur() {
+    }
+    public boolean utiliserDesintegrateur() {
+    }
+    */
 
 }

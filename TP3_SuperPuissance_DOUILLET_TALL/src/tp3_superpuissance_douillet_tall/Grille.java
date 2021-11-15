@@ -9,10 +9,15 @@ package tp3_superpuissance_douillet_tall;
  * @author douil
  */
 public class Grille {
-    Cellule[6][7] CellulesJeu;
-          
+    Cellule CellulesduJeu[][] = new Cellule[6][7];       
+   
     public Grille(){
-        
+        //Initialisation de la grille 6*7 : 
+        for(int i=0;i<6;i++){
+            for(int j=0;j<7;j++){
+                CellulesduJeu[i][j]=new Cellule();
+            }
+        }
     }
     
     public boolean ajouterJetonDansColonne(Jeton,int){
@@ -36,7 +41,16 @@ public class Grille {
     public boolean etreGagnantePourJoueur(Joueur){
         
     }
-    public void tasserGrille(int){
-        
+   /* public void tasserGrille(int){   
     }
+    public boolean colonneRemplie(int) {       
+    }
+    public boolean placerDesintegrateur(int,int){
+    }
+    public boolean placerTrouNoir(int,int) {
+    }
+    public boolean supprimerJeton(int,int){
+    }
+
+*/
 }
