@@ -19,26 +19,60 @@ public class Grille {
             }
         }
     }
+
     
-    public boolean ajouterJetonDansColonne(Jeton,int){
+    public boolean ajouterJetonDansColonne(Jeton joueur,int colonne){ 
+        //Colonne remplie ?
+        if (colonne )
         
+        
+        return false;
     }
-    public boolean etreRemplie(){
-        
-    }
-    public void viderGrille(){
-        
-    }    
-    public void afficherGrilleSurConsole() {
-        
-    }    
-    public boolean celluleOccupee(int,int){
-        
-    }
-    public String lireCouleurDuJeton(int,int){
     
+    
+    public boolean etreRemplie(){ // Renvoi true si la grille est remplie
+        
+        
+        
+        
+        return true;   
     }
-    public boolean etreGagnantePourJoueur(Joueur){
+    
+    
+    
+    public void viderGrille(){ //vide la grille
+         for(int i=0;i<6;i++){
+            for(int j=0;j<7;j++){
+                CellulesduJeu[i][j].jetonCourant = null;
+            }
+         }
+    }    
+    public void afficherGrilleSurConsole() { // Affichage avec couleurs + trou noirs
+          for(int i=0;i<6;i++){
+            for(int j=0;j<7;j++){
+                if (CellulesduJeu[i][j].jetonCourant == null){
+                    System.out.print(" ");
+                }
+                else {
+                    System.out.print(CellulesduJeu[i][j].jetonCourant);
+                }
+            }
+          }
+    }    
+    public boolean celluleOccupee(int i ,int j){ //retourne vrai si la cellule est occupé
+        if (CellulesduJeu[i][j].jetonCourant == null) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    public String lireCouleurDuJeton(int i ,int j ){ // renvoi la couleur
+        return CellulesduJeu[i][j].lireCouleur();
+    }
+    
+    public boolean etreGagnantePourJoueur(Joueur){ // renvoi vrai si un joueur à aligner 4 pions d'une même couleur (diago/horizentale/verticale)
+        
         
     }
    /* public void tasserGrille(int){   
