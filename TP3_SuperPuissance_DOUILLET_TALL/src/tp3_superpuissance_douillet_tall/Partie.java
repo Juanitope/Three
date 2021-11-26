@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package tp3_superpuissance_douillet_tall;
-import java.util.Random;
 import java.util.Scanner;
 /**
  *
