@@ -33,29 +33,19 @@ public class Partie {
     public void intialiserPartie(){ // Création de la grille et des jetons + Initialisation des paramètres joueurs
       // attribuerCouleursAuxJoueurs();
         grilledeJeu= new Grille();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Entrez le nom du Joueur0 :");
-        Joueur Joueur0  = new Joueur(sc.nextLine());
-        System.out.println("Entrez le nom du Joueur1 :");
-        Joueur Joueur1 = new Joueur(sc.nextLine());
-
-
         
-        ListeJoueurs[0]=Joueur0;
-        ListeJoueurs[1]=Joueur1;
-        attribuerCouleursAuxJoueurs();
-
         //donner les jetons aux joueur 
 
         for (int i = 0; i < 21; i++){
             Jeton Jaune = new Jeton(ListeJoueurs[0].Couleur);
-            Joueur0.ajouterjeton(Jaune);
+            ListeJoueurs[0].ajouterjeton(Jaune);
             Jeton Rouge = new Jeton(ListeJoueurs[1].Couleur);
-            Joueur1.ajouterjeton(Rouge);
+            ListeJoueurs[1].ajouterjeton(Rouge);
 
         }
         grilledeJeu.afficherGrilleSurConsole();
 
+        //Joueur commencant aléatoire
         int[] choice ={0,1};
         int aleatoire;
         aleatoire = choice[(int) (Math.random() * choice.length)];
@@ -64,8 +54,10 @@ public class Partie {
         }else{
             joueurCourant = ListeJoueurs[1];
         }
+        
+        //Placer les trou noirs et désintegrateurs
     }
     public void debuterPartie(){
-        intialiserPartie();
+       System.out.println("TIME TO SHINE !");
     }
 }
