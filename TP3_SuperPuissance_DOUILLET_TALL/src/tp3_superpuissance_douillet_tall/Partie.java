@@ -59,5 +59,11 @@ public class Partie {
     }
     public void debuterPartie(){
        System.out.println("TIME TO SHINE !");
+       
+       
+       
+       
+       
+       
     }
 }
