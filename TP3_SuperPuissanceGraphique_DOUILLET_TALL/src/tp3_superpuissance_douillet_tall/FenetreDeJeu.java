@@ -19,7 +19,7 @@ public class FenetreDeJeu extends javax.swing.JFrame {
         initComponents();
         PannelInfoJoueur.setVisible(false);
         PannelInfoPartie.setVisible(false);
-        
+       
         for (int i=5 ; i>=0 ; i--){
             for (int j=0 ; j<7 ; j++){
                 CelluleGraphiique cellGraph = new CelluleGraphiique(grilledeJeu.CellulesduJeu[i][j]);
@@ -81,7 +81,7 @@ public class FenetreDeJeu extends javax.swing.JFrame {
         d1 = new javax.swing.JLabel();
         c2 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        nj3 = new javax.swing.JLabel();
+        nj2 = new javax.swing.JLabel();
         bouton6 = new javax.swing.JButton();
         bouton0 = new javax.swing.JButton();
         boutin1 = new javax.swing.JButton();
@@ -197,8 +197,8 @@ public class FenetreDeJeu extends javax.swing.JFrame {
         jLabel11.setText("Joueur 2");
         PannelInfoJoueur.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
-        nj3.setText("nomjoueur2");
-        PannelInfoJoueur.add(nj3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
+        nj2.setText("nomjoueur2");
+        PannelInfoJoueur.add(nj2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
 
         getContentPane().add(PannelInfoJoueur, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 180, 200, 210));
 
@@ -258,6 +258,11 @@ public class FenetreDeJeu extends javax.swing.JFrame {
     private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
         PannelInfoJoueur.setVisible(true);
         PannelInfoPartie.setVisible(true);
+        PannelCréationPartie.setVisible(false);
+        //attribuerCouleursAuxJoueurs();
+        initialiserPartie();
+        
+        PannelGrille.repaint();
                     // TODO add your handling code here:
     }//GEN-LAST:event_startActionPerformed
 
@@ -289,13 +294,94 @@ public class FenetreDeJeu extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FenetreDeJeu().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new FenetreDeJeu().setVisible(true);
         });
     }
+    public void attribuerCouleursAuxJoueurs(){
+       int [] variablepossible = {0,1};
+       int random;
+       random = variablepossible [(int) (Math.random()* variablepossible.length)];
+       if (random==0){
+       ListeJoueurs[0].Couleur = "Rouge";
+       ListeJoueurs[1].Couleur = "Jaune";
+       }
+       else {
+           ListeJoueurs[1].Couleur = "Rouge";
+           ListeJoueurs[0].Couleur = "Jaune";
+       }
+    }
+    public void initialiserPartie(){ // Création de la grille et des jetons + Initialisation des paramètres joueurs
+        
+        grilledeJeu= new Grille();
+        String nomjoueur0 = nomjoueur1.getText();
+        Joueur Joueur0 =new Joueur(nomjoueur0);
+        String nomjoueur3 = nomjoueur2.getText();
+        Joueur Joueur1 =new Joueur(nomjoueur3);
+        
+        nj1.setText(nomjoueur0);
+        c1.setText(Joueur0.Couleur);
+        d1.setText(Joueur0.nombreDesintegrateurs+"");
+        nj2.setText(nomjoueur3);
+        c2.setText(Joueur1.Couleur);
+        d2.setText(Joueur1.nombreDesintegrateurs+"");
+        
+        
+        //donner les jetons aux joueur 
 
+        for (int i = 0; i < 21; i++){
+            Jeton Jaune = new Jeton(ListeJoueurs[0].Couleur);
+            ListeJoueurs[0].ajouterjeton(Jaune);
+            Jeton Rouge = new Jeton(ListeJoueurs[1].Couleur);
+            ListeJoueurs[1].ajouterjeton(Rouge);
+
+        }
+        //Jeton listeJetons[] = new Jeton[21];
+        
+        
+        //grilledeJeu.afficherGrilleSurConsole();
+
+        //Joueur commencant aléatoire
+        int[] choice ={0,1};
+        int aleatoire;
+        aleatoire = choice[(int) (Math.random() * choice.length)];
+        if (aleatoire==0){
+            joueurCourant = ListeJoueurs[0];
+            
+        }else{
+            joueurCourant = ListeJoueurs[1];
+        }
+        
+       jcourant.setText(joueurCourant.Nom);
+        
+        int[] choixcol ={0,1,2,3,4,5};
+        int aleacol;
+        int[] choixlin ={0,1,2,3,4,5,6};
+        int alealin;
+        int i = 0;
+        while (i < 2) {
+
+            aleacol = choixcol[(int) (Math.random() * choixcol.length)];    //tirer aleatoirement un entier
+            alealin = choixlin[(int) (Math.random() * choixlin.length)];
+            if ((grilledeJeu.CellulesduJeu[aleacol][alealin].trouNoir == false) && (grilledeJeu.CellulesduJeu[aleacol][alealin].presenceDesintegrateur() == false)) {
+                grilledeJeu.placerDesintegrateur(aleacol, alealin);
+                i += 1;
+            }
+
+        }
+        int j = 0;
+
+        while (j < 3) {
+
+            aleacol = choixcol[(int) (Math.random() * choixcol.length)];    //tirer aleatoirement un entier
+            alealin = choixlin[(int) (Math.random() * choixlin.length)];
+            if ((grilledeJeu.CellulesduJeu[aleacol][alealin].trouNoir == false) && (grilledeJeu.CellulesduJeu[aleacol][alealin].presenceDesintegrateur() == false)) {
+                grilledeJeu.placerDesintegrateur(aleacol, alealin);
+                j += 1;
+            }
+        }
+        
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PannelCréationPartie;
     private javax.swing.JPanel PannelGrille;
@@ -331,7 +417,7 @@ public class FenetreDeJeu extends javax.swing.JFrame {
     private javax.swing.JLabel jcourant;
     private javax.swing.JTextArea message;
     private javax.swing.JLabel nj1;
-    private javax.swing.JLabel nj3;
+    private javax.swing.JLabel nj2;
     private javax.swing.JTextField nomjoueur1;
     private javax.swing.JTextField nomjoueur2;
     private javax.swing.JButton start;

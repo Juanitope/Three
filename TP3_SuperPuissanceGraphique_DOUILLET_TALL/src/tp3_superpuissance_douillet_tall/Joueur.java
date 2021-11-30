@@ -4,6 +4,8 @@
  */
 package tp3_superpuissance_douillet_tall;
 
+import javax.swing.JTextField;
+
 /**
  *
  * @author douil
@@ -25,6 +27,10 @@ public class Joueur {
     public Joueur(String nom){
         Nom=nom;
        
+    }
+
+    Joueur(JTextField nomjoueur1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     public void affectcouleur(String couleurJeton){
         Couleur=couleurJeton;
