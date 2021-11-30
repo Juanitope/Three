@@ -3,18 +3,44 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package tp3_superpuissance_douillet_tall;
-
 /**
  *
  * @author douil
  */
 public class FenetreDeJeu extends javax.swing.JFrame {
-
+    Joueur[] ListeJoueurs= new Joueur[2];
+    Joueur joueurCourant;
+    Grille grilledeJeu = new Grille() ;
+    
     /**
      * Creates new form FenetreDeJeu
      */
     public FenetreDeJeu() {
         initComponents();
+        PannelInfoJoueur.setVisible(false);
+        PannelInfoPartie.setVisible(false);
+        
+        for (int i=5 ; i>=0 ; i--){
+            for (int j=0 ; j<7 ; j++){
+                CelluleGraphiique cellGraph = new CelluleGraphiique(grilledeJeu.CellulesduJeu[i][j]);
+                PannelGrille.add(cellGraph);
+                
+                }
+            }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
     /**
@@ -69,7 +95,7 @@ public class FenetreDeJeu extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         PannelGrille.setBackground(new java.awt.Color(0, 0, 255));
-        PannelGrille.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        PannelGrille.setLayout(new java.awt.GridLayout(6, 7));
         getContentPane().add(PannelGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 672, 576));
 
         PannelInfoPartie.setBackground(new java.awt.Color(255, 128, 0));
@@ -120,6 +146,11 @@ public class FenetreDeJeu extends javax.swing.JFrame {
         start.setBackground(new java.awt.Color(0, 0, 240));
         start.setFont(new java.awt.Font("ROG Fonts", 1, 11)); // NOI18N
         start.setText("START");
+        start.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startActionPerformed(evt);
+            }
+        });
         PannelCréationPartie.add(start, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
 
         getContentPane().add(PannelCréationPartie, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 200, 120));
@@ -223,6 +254,12 @@ public class FenetreDeJeu extends javax.swing.JFrame {
     private void nomjoueur2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomjoueur2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nomjoueur2ActionPerformed
+
+    private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
+        PannelInfoJoueur.setVisible(true);
+        PannelInfoPartie.setVisible(true);
+                    // TODO add your handling code here:
+    }//GEN-LAST:event_startActionPerformed
 
     /**
      * @param args the command line arguments
