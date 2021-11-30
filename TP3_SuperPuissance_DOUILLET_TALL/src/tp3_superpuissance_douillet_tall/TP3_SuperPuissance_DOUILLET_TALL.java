@@ -27,7 +27,7 @@ public class TP3_SuperPuissance_DOUILLET_TALL {
         System.out.println("  GRILLE");
         Partie LaPuissance = new Partie(Joueur0,Joueur1);
         LaPuissance.attribuerCouleursAuxJoueurs();
-        LaPuissance.intialiserPartie();
+        LaPuissance.initialiserPartie();
         LaPuissance.debuterPartie();
     }
     

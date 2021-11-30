@@ -40,9 +40,17 @@ public class Grille {
                 return false;
                 }
             }
+            return true;   
+    }
+    public boolean colonneRemplie(int colonne){
+        for (int i=0; i<6 ; i++) {
+            if (CellulesduJeu[i][colonne].jetonCourant==null){;
+                
+                return false;
+                }
+            }
         return true;   
     }
-    
     
     
     public void viderGrille(){ //vide la grille
@@ -143,15 +151,7 @@ public class Grille {
             }
         }       
     }    
-    public boolean colonneRemplie(int colonne){
-        for (int i=0; i<6 ; i++) {
-            if (CellulesduJeu[i][colonne]==null){
-                
-                return false;
-                }
-            }
-        return true;   
-    }
+   
         public boolean placerDesintegrateur(int i, int j) {
         if (CellulesduJeu[i][j].desintegrateur!=true) {
             CellulesduJeu[i][j].desintegrateur = true;
