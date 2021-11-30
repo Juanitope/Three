@@ -162,12 +162,15 @@ public class Partie {
          //Affichage des résultats
                 if (grilledeJeu.etreGagnantePourJoueur(ListeJoueurs[0])==true) {
                    System.out.println("Le joueur gagnant est : "+ListeJoueurs[0].Nom); 
+                   break;
                 }
                 if (grilledeJeu.etreGagnantePourJoueur(ListeJoueurs[1])==true) {
                    System.out.println("Le joueur gagnant est : "+ListeJoueurs[1].Nom); 
+                   break;
                 }
                 if (grilledeJeu.etreRemplie()==true) {
                     System.out.println("Personne n'a gagné...");
+                    break;
                 }
 
      
@@ -175,4 +178,6 @@ public class Partie {
                 
     } 
 }
+
+
 
