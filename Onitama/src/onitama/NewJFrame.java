@@ -34,14 +34,20 @@ public class NewJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         GrilleDeJeu = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(150, 131, 236));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         GrilleDeJeu.setBackground(new java.awt.Color(180, 240, 240));
         GrilleDeJeu.setPreferredSize(new java.awt.Dimension(600, 600));
         GrilleDeJeu.setLayout(new java.awt.GridLayout(5, 5));
-        getContentPane().add(GrilleDeJeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 600, 600));
+        getContentPane().add(GrilleDeJeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 600, 600));
+
+        jLabel1.setFont(new java.awt.Font("Viner Hand ITC", 1, 48)); // NOI18N
+        jLabel1.setText("ONITAMA");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, -1, -1));
 
         setSize(new java.awt.Dimension(1200, 900));
         setLocationRelativeTo(null);
@@ -88,5 +94,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel GrilleDeJeu;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
