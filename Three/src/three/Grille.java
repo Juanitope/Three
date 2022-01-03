@@ -22,9 +22,7 @@ public class Grille {
         }
     }
     
-    public void Affichage(){
-        
-    }
+    
     
     public void NewCarte(){
         Random random = new Random();
@@ -41,8 +39,56 @@ public class Grille {
             }
             
           
-    public void Addition(){
-        
+    public void Addition(int choix){
+        switch(choix){
+                case 4: //GAUCHE
+                    for (int i=0; i<4 ; i++){
+                        for (int j=1;j<4;j++){
+                            if((GrilledeJeu[i][j]==GrilledeJeu[i][j-1]) 
+                                    ||(GrilledeJeu[i][j]==2 && GrilledeJeu[i][j-1]==1)||(GrilledeJeu[i][j]==1 && GrilledeJeu[i][j-1]==2)
+                                    ||(GrilledeJeu[i][j-1]==0)){
+                                GrilledeJeu[i][j-1]= GrilledeJeu[i][j] + GrilledeJeu[i][j-1];
+                                GrilledeJeu[i][j]=0;
+                            }
+                        }
+                    }
+                case 5: //BASx
+                    for (int j=0; j<4 ; j++){
+                        for (int i=2;i>-1;i--){
+                            if((GrilledeJeu[i][j]==GrilledeJeu[i+1][j]) 
+                                    ||(GrilledeJeu[i][j]==2 && GrilledeJeu[i+1][j]==1)||(GrilledeJeu[i][j]==1 && GrilledeJeu[i+1][j]==2)
+                                    ||(GrilledeJeu[i+1][j]==0)){
+                                GrilledeJeu[i+1][j]= GrilledeJeu[i][j] + GrilledeJeu[i+1][j];
+                                GrilledeJeu[i][j]=0;
+                            }
+                        }
+                    }
+                case 6: // DROITE
+                    for (int i=0; i<4 ; i++){
+                        for (int j=2;j>-1;j--){
+                            if((GrilledeJeu[i][j]==GrilledeJeu[i][j+1]) 
+                                    ||(GrilledeJeu[i][j]==2 && GrilledeJeu[i][j+1]==1)||(GrilledeJeu[i][j]==1 && GrilledeJeu[i][j+1]==2)
+                                    ||(GrilledeJeu[i][j+1]==0)){
+                                GrilledeJeu[i][j+1]= GrilledeJeu[i][j] + GrilledeJeu[i][j+1];
+                                GrilledeJeu[i][j]=0;
+                            }
+                        }
+                    }
+                case 8: // HAUT
+                    for (int j=0; j<4 ; j++){
+                        for (int i=1;i<4;i++){
+                            if((GrilledeJeu[i][j]==GrilledeJeu[i-1][j]) 
+                                    ||(GrilledeJeu[i][j]==2 && GrilledeJeu[i-1][j]==1)||(GrilledeJeu[i][j]==1 && GrilledeJeu[i-1][j]==2)
+                                    ||(GrilledeJeu[i-1][j]==0)){
+                                GrilledeJeu[i-1][j]= GrilledeJeu[i][j] + GrilledeJeu[i-1][j];
+                                GrilledeJeu[i][j]=0;
+                            }
+                        }
+                    }
+                default:
+                    break;
+                    
+            }
     }
     
     
