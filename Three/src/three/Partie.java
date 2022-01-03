@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Partie {
     int choix;
-    int score;
+    int score=0;
     Grille GrilledeJeu;
     
     public void DeroulementPartie(){
@@ -41,38 +41,25 @@ public class Partie {
                 case 6: // DROITE
                     
                 case 8: // HAUT
+                    
+                default:
+                    break;
+                    
             }
             
             
             
         }while (!partieFini());
-       
     
+    //Calcul du score 
+    score = CalculScore(score);
 
-
-
-
-
-
-//Mouvements effectué par le joueur (haut bas gauche droite)
-    //----> +1 dans le mouvement en question dans la Grille
-    
-    //Check si deux nombres sont égaux cote a cote + l'un est bloqué par un des murs ou collé a une carte qui bouge pas
-    //---> Si oui il s'assemblent (différents de 2 et 1
-    
-    //Check si 2+1 se fusionnent soit = 3 
-    
-    
-    //Puis a chaqye mouvement :
-    //----> Apparation d'une nouvelle carte aléatoire entre 1 2 sur les bords de la grille sans présence de carte
-    //---> Soit i=3 ou j=3
-    
-    
-    
-    
+        
+        
     }
-
-    private void NewCarte() {
+    
+    
+       private void NewCarte() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -83,4 +70,12 @@ public class Partie {
     private boolean partieFini() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    private int CalculScore(int score) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
+
+
+        
+        

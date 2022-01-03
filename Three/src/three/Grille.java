@@ -72,8 +72,23 @@ public class Grille {
            // ----> Calcul du score final , en fonction des cartes présentes
            return true;
            
-       }         
+       }    
+   public int CalculScore(int score){
+   for (int i=0; i<4 ; i++){
+            for (int j=0; j<4 ;j++){
+                if (GrilledeJeu[i][j]!=1 && GrilledeJeu[i][j]!=2){
+                score += GrilledeJeu[i][j] ;
+                }
+                
+            }
+            }
+    return score;
+    }
+   
+
+
+}
             
 
     
-}
+
