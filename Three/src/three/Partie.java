@@ -9,20 +9,33 @@ package three;
  * @author douil
  */
 public class Partie {
+    int choix;
+    int score;
+    Grille GrilledeJeu;
     
+    public void DebutPartie(){
+        //Initialisation du jeu avec des cartes de départ
+        // peut importe sur la grille, 1 ou 2  
+        
+    }
+    
+    public void DeroulementPartie(){
+        System.out.print("Quelle direction souhaitez vous prendre ?");
     //Mouvements effectué par le joueur (haut bas gauche droite)
-    //----> Apparation d'une nouvelle carte aléatoire entre 1 2 3
     //----> +1 dans le mouvement en question dans la Grille
     
     //Check si deux nombres sont égaux cote a cote + l'un est bloqué par un des murs ou collé a une carte qui bouge pas
-    //---> Si oui il s'assemblent
+    //---> Si oui il s'assemblent (différents de 2 et 1
     
     //Check si 2+1 se fusionnent soit = 3 
     
     
+    //Puis a chaqye mouvement :
+    //----> Apparation d'une nouvelle carte aléatoire entre 1 2 sur les bords de la grille sans présence de carte
+    //---> Soit i=3 ou j=3
     
     
-    //Si la partie est finie (soit la fonction retourne true)
-    // ----> Calcul du score final , en fonction des cartes présentes
-
+    
+    
+    }
 }
