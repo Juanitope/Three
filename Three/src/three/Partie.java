@@ -15,12 +15,12 @@ import java.util.Scanner;
 public class Partie {
     int choix;
     int score=0;
-    Grille GrilledeJeu;
+    Grille GrilledeJeu=new Grille();
     
     public void DeroulementPartie(){
-        CréationGrille();
+//        CréationGrille();
         for (int z = 0; z<6 ; z++){
-        NewCarte();
+        GrilledeJeu.NewCarte();
         }
         Scanner scanner = new Scanner(System.in);
         //Random des lignes colonnes
@@ -33,36 +33,32 @@ public class Partie {
             //Affichage
             System.out.print("Quelle direction souhaitez vous prendre ? (4/5/6/8");
             choix=scanner.nextInt();
-            switch(choix){
-                case 4: //GAUCHE
-                    
-                case 5: //BAS
-                    
-                case 6: // DROITE
-                    
-                case 8: // HAUT
-                    
-                default:
-                    break;
-                    
-            }
             
+            //Faire la vérif sic'est le bon choix
             
+            GrilledeJeu.Addition(choix);
+            GrilledeJeu.NewCarte();
             
-        }while (!partieFini());
+        }while (!GrilledeJeu.partieFini());
     
+    System.out.println("Zut vous êtes bloqué , vous avez perdu ! ");
     //Calcul du score 
     score = CalculScore(score);
-
+    if (score<=100){
+    System.out.println("Pas oufouf votre score est de : "+score);
+    }
+    else{
+    System.out.println("Wow votre score est de : "+score);
+    }
         
         
     }
     
     
-       private void NewCarte() {
+   /*    private void NewCarte() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+*/
     private void CréationGrille() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -74,8 +70,12 @@ public class Partie {
     private int CalculScore(int score) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-}
 
+ /*   private void Addition(int choix) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+*/
+}
 
         
         

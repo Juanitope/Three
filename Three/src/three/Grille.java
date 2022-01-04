@@ -32,6 +32,7 @@ public class Grille {
         while (GrilledeJeu[colonne][ligne]!=0){
             colonne= random.nextInt(4);
             ligne = random.nextInt(4);
+            
         }
         if (GrilledeJeu[colonne][ligne]==0){
             GrilledeJeu[colonne][ligne]=carte;
