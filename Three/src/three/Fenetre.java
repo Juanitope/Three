@@ -34,7 +34,9 @@ public class Fenetre extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE)
+                .addGap(106, 106, 106))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,11 +82,18 @@ public class Fenetre extends javax.swing.JFrame {
         
         
         
-        
+        int score=0;
         /* Create and display the form */
-        System.out.println("BIENVENUE");
+        System.out.println("BIENVENUE SUR LE JEU DE THREE");
+        System.out.println("Règles : Les 1 et 2 s'aditionnent entre eux et les toutes les autres cartes similaires se fusionnent entre-elles");
         Partie GAME = new Partie();
-        GAME.DeroulementPartie();
+        score = GAME.DeroulementPartie();
+         if (score<=100){
+        System.out.println("Pas oufouf votre score est de : "+score);
+        }
+        else{
+        System.out.println("Wow votre score est de : "+score);
+        }
         
         
         

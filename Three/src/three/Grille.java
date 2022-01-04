@@ -59,48 +59,50 @@ public class Grille {
                 case 4: //GAUCHE
                     for (int i=0; i<4 ; i++){
                         for (int j=1;j<4;j++){
-                            if((GrilledeJeu[i][j]==GrilledeJeu[i][j-1]) 
+                            if((GrilledeJeu[i][j]==GrilledeJeu[i][j-1] && GrilledeJeu[i][j]!=1 && GrilledeJeu[i][j]!=2) 
                                     ||(GrilledeJeu[i][j]==2 && GrilledeJeu[i][j-1]==1)||(GrilledeJeu[i][j]==1 && GrilledeJeu[i][j-1]==2)
                                     ||(GrilledeJeu[i][j-1]==0)){
                                 GrilledeJeu[i][j-1]= GrilledeJeu[i][j] + GrilledeJeu[i][j-1];
                                 GrilledeJeu[i][j]=0;
                             }
                         }
-                    }
-                case 5: //BASx
+                    }break;
+                case 5: //BAS
                     for (int j=0; j<4 ; j++){
-                        for (int i=2;i>-1;i--){
-                            if((GrilledeJeu[i][j]==GrilledeJeu[i+1][j]) 
+                        for (int i=2;i>=0;i--){
+                            if((GrilledeJeu[i][j]==GrilledeJeu[i+1][j] && GrilledeJeu[i][j]!=1 && GrilledeJeu[i][j]!=2) 
                                     ||(GrilledeJeu[i][j]==2 && GrilledeJeu[i+1][j]==1)||(GrilledeJeu[i][j]==1 && GrilledeJeu[i+1][j]==2)
                                     ||(GrilledeJeu[i+1][j]==0)){
                                 GrilledeJeu[i+1][j]= GrilledeJeu[i][j] + GrilledeJeu[i+1][j];
                                 GrilledeJeu[i][j]=0;
                             }
                         }
-                    }
+                    }break;
                 case 6: // DROITE
                     for (int i=0; i<4 ; i++){
-                        for (int j=2;j>-1;j--){
-                            if((GrilledeJeu[i][j]==GrilledeJeu[i][j+1]) 
+                        for (int j=2;j>=0;j--){
+                            if((GrilledeJeu[i][j]==GrilledeJeu[i][j+1] && GrilledeJeu[i][j]!=1 && GrilledeJeu[i][j]!=2) 
                                     ||(GrilledeJeu[i][j]==2 && GrilledeJeu[i][j+1]==1)||(GrilledeJeu[i][j]==1 && GrilledeJeu[i][j+1]==2)
                                     ||(GrilledeJeu[i][j+1]==0)){
                                 GrilledeJeu[i][j+1]= GrilledeJeu[i][j] + GrilledeJeu[i][j+1];
                                 GrilledeJeu[i][j]=0;
                             }
                         }
-                    }
+                    } break;
                 case 8: // HAUT
                     for (int j=0; j<4 ; j++){
                         for (int i=1;i<4;i++){
-                            if((GrilledeJeu[i][j]==GrilledeJeu[i-1][j]) 
+                            if((GrilledeJeu[i][j]==GrilledeJeu[i-1][j] && GrilledeJeu[i][j]!=1 && GrilledeJeu[i][j]!=2) 
                                     ||(GrilledeJeu[i][j]==2 && GrilledeJeu[i-1][j]==1)||(GrilledeJeu[i][j]==1 && GrilledeJeu[i-1][j]==2)
                                     ||(GrilledeJeu[i-1][j]==0)){
                                 GrilledeJeu[i-1][j]= GrilledeJeu[i][j] + GrilledeJeu[i-1][j];
                                 GrilledeJeu[i][j]=0;
                             }
+                            
                         }
-                    }
+                    }break;
                 default:
+                        
                     break;
                     
             }

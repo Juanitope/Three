@@ -19,7 +19,7 @@ public class Partie {
     
     public int DeroulementPartie(){
 //        CréationGrille();
-        for (int z = 0; z<6 ; z++){
+        for (int z = 0; z<4 ; z++){
         GrilledeJeu.NewCarte();
         }
         Scanner scanner = new Scanner(System.in);
@@ -28,6 +28,7 @@ public class Partie {
        
         do {
             //Affichage
+            GrilledeJeu.NewCarte();
             GrilledeJeu.afficherlagrillesurconsole();
             System.out.print("Quelle direction souhaitez vous prendre ? (4 GAUCHE/5 BAS /6 DROITE/8 HAUT) : ");
             choix=scanner.nextInt();
@@ -35,14 +36,15 @@ public class Partie {
             //Faire la vérif sic'est le bon choix
             
             GrilledeJeu.Addition(choix);
-            GrilledeJeu.NewCarte();
             
-        }while (GrilledeJeu.partieFini()!=true);
+            
+            
+        }while (GrilledeJeu.partieFini()!=true && choix!=7);
     
-    System.out.println("Pas de chance vous êtes bloqué , vous avez perdu ! ");
+        System.out.println("Pas de chance vous êtes bloqué , vous avez perdu ! ");
     //Calcul du score 
-    score = GrilledeJeu.CalculScore(score);
-    return score;      
+        score = GrilledeJeu.CalculScore(score);
+        return score;      
     }
     
 }
