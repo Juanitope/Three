@@ -12,7 +12,21 @@ public class Grille {
     int GrilledeJeu[][]= new int[4][4];
     int carte;
    
-    
+    public void afficherlagrillesurconsole() {
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (GrilledeJeu[i][j] != 0) {
+                    System.out.print("  " + GrilledeJeu[i][j] + "  ");
+                } else {
+                    System.out.print("  _  ");
+                }
+            }
+            System.out.println();
+
+        }
+
+    }
     
     public void CréationGrille(){
         for (int i=0; i<4 ; i++){

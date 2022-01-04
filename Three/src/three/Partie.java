@@ -23,15 +23,13 @@ public class Partie {
         GrilledeJeu.NewCarte();
         }
         Scanner scanner = new Scanner(System.in);
-        //Random des lignes colonnes
-        Random random = new Random();
-        int colonne= random.nextInt(4);
-        int ligne = random.nextInt(4);
+        
         
        
         do {
             //Affichage
-            System.out.print("Quelle direction souhaitez vous prendre ? (4/5/6/8");
+            GrilledeJeu.afficherlagrillesurconsole();
+            System.out.print("Quelle direction souhaitez vous prendre ? (4/5/6/8) : ");
             choix=scanner.nextInt();
             
             //Faire la vérif sic'est le bon choix

@@ -82,7 +82,7 @@ public class Fenetre extends javax.swing.JFrame {
         
         
         /* Create and display the form */
-        System.out.print("BIENVENUE");
+        System.out.println("BIENVENUE");
         Partie GAME = new Partie();
         GAME.DeroulementPartie();
         
