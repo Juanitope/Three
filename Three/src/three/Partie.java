@@ -17,7 +17,7 @@ public class Partie {
     int score=0;
     Grille GrilledeJeu=new Grille();
     
-    public void DeroulementPartie(){
+    public int DeroulementPartie(){
 //        CréationGrille();
         for (int z = 0; z<6 ; z++){
         GrilledeJeu.NewCarte();
@@ -29,7 +29,7 @@ public class Partie {
         do {
             //Affichage
             GrilledeJeu.afficherlagrillesurconsole();
-            System.out.print("Quelle direction souhaitez vous prendre ? (4/5/6/8) : ");
+            System.out.print("Quelle direction souhaitez vous prendre ? (4 GAUCHE/5 BAS /6 DROITE/8 HAUT) : ");
             choix=scanner.nextInt();
             
             //Faire la vérif sic'est le bon choix
@@ -37,43 +37,14 @@ public class Partie {
             GrilledeJeu.Addition(choix);
             GrilledeJeu.NewCarte();
             
-        }while (!GrilledeJeu.partieFini());
+        }while (GrilledeJeu.partieFini()!=true);
     
-    System.out.println("Zut vous êtes bloqué , vous avez perdu ! ");
+    System.out.println("Pas de chance vous êtes bloqué , vous avez perdu ! ");
     //Calcul du score 
-    score = CalculScore(score);
-    if (score<=100){
-    System.out.println("Pas oufouf votre score est de : "+score);
-    }
-    else{
-    System.out.println("Wow votre score est de : "+score);
-    }
-        
-        
+    score = GrilledeJeu.CalculScore(score);
+    return score;      
     }
     
-    
-   /*    private void NewCarte() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-*/
-    private void CréationGrille() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private boolean partieFini() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private int CalculScore(int score) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
- /*   private void Addition(int choix) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-*/
 }
-
         
         
